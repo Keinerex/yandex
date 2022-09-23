@@ -46,14 +46,12 @@
     </div>
 </div>
 
-<div class="circle">
 
-</div>
 <div class="frame">
     <div class="head">
         <div class="avatar">
-
             <img src="avatar.jpeg">
+            <div class="img-wrap"></div>
         </div>
         <div class="title-wrapper">
             <div class="Name">
@@ -198,15 +196,10 @@
 
 <script>
 
-    let sizes
-    let circle
+    let img = document.querySelector("img")
     setInterval(() => {
-        sizes = document.querySelector('img').getBoundingClientRect()
-        circle = document.querySelector('.circle')
-        circle.style.width = `${document.querySelector("img").width}px`
-        circle.style.top = `${sizes.top}px`
-        circle.style.left = `${sizes.left}px`
-    }, 10)
+        document.querySelector(".img-wrap").style.width = `${img.getBoundingClientRect().width}px`
+    }, 50)
 
 
     let colors_buttons = document.querySelectorAll(".select_btn")
@@ -233,6 +226,7 @@
     }
 
 </script>
+
 </body>
 
 </html>
