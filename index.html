@@ -46,10 +46,13 @@
     </div>
 </div>
 
+<div class="circle">
 
+</div>
 <div class="frame">
     <div class="head">
         <div class="avatar">
+
             <img src="avatar.jpeg">
         </div>
         <div class="title-wrapper">
@@ -76,24 +79,43 @@
             <div class="education">
                 <h3>Education</h3>
                 <div class="line"></div>
-                <h4>a</h4>
-                <h4>a</h4>
-                <h4>a</h4>
+                <ul>
+                    <li>
+                        Лицей №124 г. Барнаул
+                    </li>
+                    <li>Лицей академии Яндекса (диплом с отличием)</li>
+                    <li>АИЦТиОКО (IT-CUBE22)</li>
+                </ul>
 
             </div>
             <div class="experience">
-                <h3>Expirience</h3>
+                <h3>Experience</h3>
                 <div class="line"></div>
-                <h4>a</h4>
-                <h4>a</h4>
-                <h4>a</h4>
+                <ul>
+                    <li>
+                        Wordskills Russia
+                    </li>
+                    <li>Всероссийская олимпиада школьников</li>
+                    <li>Алтайский краевой инженерный хакатон</li>
+                </ul>
             </div>
             <div class="skills">
                 <h3>Skills</h3>
                 <div class="line"></div>
-                <h4>a</h4>
-                <h4>a</h4>
-                <h4>a</h4>
+                <div class="ul-wrap">
+                    <ul class="ul-skills">
+                        <li>Python</li>
+                        <li>BigData</li>
+                        <li>HTML</li>
+
+                    </ul>
+                    <ul class="ul-skills">
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>C</li>
+                    </ul>
+                </div>
+
             </div>
         </div>
         <div class="left">
@@ -175,7 +197,19 @@
 </div>
 
 <script>
-    colors_buttons = document.querySelectorAll(".select_btn")
+
+    let sizes
+    let circle
+    setInterval(() => {
+        sizes = document.querySelector('img').getBoundingClientRect()
+        circle = document.querySelector('.circle')
+        circle.style.width = `${document.querySelector("img").width}px`
+        circle.style.top = `${sizes.top}px`
+        circle.style.left = `${sizes.left}px`
+    }, 10)
+
+
+    let colors_buttons = document.querySelectorAll(".select_btn")
     for (let btn of colors_buttons) {
         console.log(btn)
         btn.onclick = event => {

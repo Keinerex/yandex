@@ -2,14 +2,35 @@
     --gl-color: #20C997;
 }
 
+
 .frame {
-    background: #252525;
+    background: linear-gradient(160.36deg, var(--gl-color) -50%, rgba(0, 0, 0, 0) 30%), #252525;
     margin: 0 auto;
 }
 
 img {
-    width: 50%;
+    width: 70%;
     border-radius: 50%;
+}
+
+.circle {
+    position: absolute;
+    aspect-ratio: 1/1;
+    border-radius: 50%;;
+    mso-border-shadow: yes;
+    animation: 5s linear round infinite;
+    box-shadow: 10px 5px 20px var(--gl-color);
+}
+
+
+
+@keyframes round {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 .avatar {
@@ -17,7 +38,6 @@ img {
     justify-content: center;
     align-items: center;
 }
-
 
 
 body {
@@ -64,7 +84,7 @@ body {
 }
 
 .select_btn {
-    border-radius: 40%;
+    border-radius: 10px;
 }
 
 .selected-color {
@@ -122,7 +142,6 @@ body {
 
 .right {
     order: 2;
-
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -135,9 +154,11 @@ body {
     padding-right: 30px;
     margin: 10px;
     flex-grow: 1;
-    background: #252525;
-    border-radius: 5%;
+    background: linear-gradient(160.36deg, var(--gl-color) -50%, rgba(0, 0, 0, 0) 50%), #252525;
+    border-radius: 10px;
+    min-height: 170px;
     width: calc(90% - 60px);
+    box-shadow: 5px 5px 15px var(--gl-color);
 }
 
 
@@ -147,14 +168,38 @@ body {
     height: 2px;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4, h5, li {
     color: #DCDCDCFF;
 }
 
+ul {
+    margin: 0;
+}
+
 .about, .goals {
-    border-radius: 5%;
+    border-radius: 10px;
     border: solid 2px var(--gl-color);
     flex-grow: 3;
+    box-shadow: 5px 5px 15px var(--gl-color);
+}
+
+li::marker {
+    color: var(--gl-color);
+}
+
+.skills {
+    background: linear-gradient(160.36deg, var(--gl-color) -50%, rgba(0, 0, 0, 0) 50%), #252525;
+}
+
+.ul-skills {
+    width: 50%;
+    height: 100%;
+}
+
+
+.ul-wrap {
+    display: flex;
+    flex-direction: row;
 }
 
 svg {
@@ -200,7 +245,7 @@ table {
 }
 
 @media screen and (min-height: 800px) {
-    .frame{
+    .frame {
 
         margin-top: calc(50vh - 400px);
     }
@@ -214,7 +259,7 @@ table {
     .right {
         width: 60%;
         height: 100%;
-        border-radius: 5% 0 5% 0;
+        border-radius: 10px 0 10px 0;
     }
 
     .left {
@@ -223,18 +268,10 @@ table {
 
     .frame {
         width: 700px;
-        background: #252525;
         height: 800px;
 
     }
 
-    .ex_avatar {
-        width: 70%;
-        aspect-ratio: 1 / 1;
-        border-radius: 50%;
-        background: forestgreen;
-
-    }
 
     .head {
         width: 100%;
@@ -272,12 +309,5 @@ table {
 
     }
 
-    .ex_avatar {
-        width: 50%;
-        aspect-ratio: 1 / 1;
-        border-radius: 50%;
-        background: forestgreen;
-
-    }
 
 }
