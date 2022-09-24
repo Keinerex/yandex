@@ -148,11 +148,21 @@ body {
 }
 
 .left-ul {
-    padding: 5px;
+    padding-left: 0;
+    margin-left: 5px;
 }
 
+a:hover > p{
+    color: var(--gl-color)
+}
+
+
+
+.skills > .line{
+    margin-bottom: 10px;
+}
 .left-ul > li::marker {
-    content: "";
+    content: "\2023\2023  ";
 }
 
 .right {
@@ -233,6 +243,10 @@ tr {
 td {
     display: flex;
     gap: 10px;
+}
+
+.ul-skills > li{
+    padding-bottom: 5px;
 }
 
 table {
