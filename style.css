@@ -20,7 +20,8 @@ img {
     animation: 5s linear round infinite;
     box-shadow: 10px 5px 25px var(--gl-color);
 }
-.modal-title{
+
+.modal-title {
     color: black;
 }
 
@@ -50,13 +51,13 @@ body {
 
 @keyframes gradient {
     0% {
-        background-position: 0% 50%;
+        background-position: 0 50%;
     }
     50% {
         background-position: 100% 50%;
     }
     100% {
-        background-position: 0% 50%;
+        background-position: 0 50%;
     }
 }
 
@@ -135,10 +136,23 @@ body {
     height: 100%;
 }
 
-.about, .goals {
+.about, .funny {
     margin: 10px;
     width: calc(90% - 40px);
-    padding: 20px;
+    padding-left: 20px;
+    padding-top: 10px;
+    border-radius: 10px;
+    border: solid 2px var(--gl-color);
+    flex-grow: 3;
+    box-shadow: 5px 5px 15px var(--gl-color);
+}
+
+.left-ul {
+    padding: 5px;
+}
+
+.left-ul > li::marker {
+    content: "";
 }
 
 .right {
@@ -169,19 +183,12 @@ body {
     height: 2px;
 }
 
-h1, h2, h3, h4, h5, li {
+h1, h2, h3, h4, h5, li, p {
     color: #DCDCDCFF;
 }
 
 ul {
     margin: 0;
-}
-
-.about, .goals {
-    border-radius: 10px;
-    border: solid 2px var(--gl-color);
-    flex-grow: 3;
-    box-shadow: 5px 5px 15px var(--gl-color);
 }
 
 li::marker {
@@ -219,12 +226,6 @@ a {
 }
 
 
-p {
-    height: 100%;
-    vertical-align: middle;
-    margin-top: 6px;
-}
-
 tr {
     padding: 20px;
 }
@@ -253,6 +254,10 @@ table {
 }
 
 @media screen and (min-width: 700px) {
+    .frame {
+        border-radius: 30px;
+    }
+
     .avatar {
         aspect-ratio: 1 / 1;
     }
