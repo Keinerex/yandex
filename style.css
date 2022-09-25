@@ -71,11 +71,24 @@ body {
     gap: 10px;
 }
 
+
 .color_select {
     display: flex;
     flex-direction: row;
     flex-grow: initial;
-    gap: 10px;
+    gap: 20px;
+}
+
+.select_btn:first-child:hover, :not(.btn-check) + .select_btn:hover {
+    background-color: unset;
+    border-color: var(--color);
+}
+
+.btn {
+    width: 30px;
+    height: 30px;
+    background-color: var(--color);
+    border-radius: 25%;
 }
 
 .btn > div {
@@ -87,10 +100,12 @@ body {
 
 .select_btn {
     border-radius: 10px;
+    border: solid 2px var(--color);
 }
 
 .selected-color {
-    border: solid black 2px;
+    background-color: unset;
+    border-color: var(--color);
 
 }
 
@@ -105,9 +120,18 @@ body {
     height: 40px;
 }
 
-.btn:first-child:hover, :not(.btn-check) + .btn:hover {
+#btn:first-child:hover, :not(.btn-check) + #btn:hover {
     background-color: var(--gl-color);
     border-color: var(--gl-color);
+}
+
+@keyframes rotate-45 {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(45deg);
+    }
 }
 
 .btn-outline-primary:hover {
@@ -152,15 +176,15 @@ body {
     margin-left: 5px;
 }
 
-a:hover > p{
+a:hover > p {
     color: var(--gl-color)
 }
 
 
-
-.skills > .line{
+.skills > .line {
     margin-bottom: 10px;
 }
+
 .left-ul > li::marker {
     content: "\2023\2023  ";
 }
@@ -245,7 +269,7 @@ td {
     gap: 10px;
 }
 
-.ul-skills > li{
+.ul-skills > li {
     padding-bottom: 5px;
 }
 
