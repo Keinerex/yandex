@@ -11,8 +11,6 @@
     <link rel="stylesheet" href="style.css  ">
     <link rel="icon" href="https://favicon.vspravke.com/ico/1/faviconka.ru_1_122154.ico" type="image/x-icon"/>
     <link rel="shortcut icon" href="https://favicon.vspravke.com/ico/1/faviconka.ru_1_122154.ico" type="image/x-icon"/>
-
-
 </head>
 <body>
 <div class="modal fade" id="modal" tabindex="-1">
@@ -65,11 +63,9 @@
                     </svg>
                 </button>
             </div>
-
         </div>
     </div>
     <div class="feet-wrapper">
-
         <div class="right">
             <div class="education">
                 <h3>Education</h3>
@@ -81,14 +77,13 @@
                     <li>Лицей академии Яндекса (диплом с отличием)</li>
                     <li>АИЦТиОКО (IT-CUBE22)</li>
                 </ul>
-
             </div>
             <div class="experience">
                 <h3>Experience</h3>
                 <div class="line"></div>
                 <ul>
                     <li>
-                        Wordskills Russia
+                        Worldskills Russia
                     </li>
                     <li>Всероссийская олимпиада школьников</li>
                     <li>Алтайский краевой инженерный хакатон</li>
@@ -102,7 +97,6 @@
                         <li>Python</li>
                         <li>BigData</li>
                         <li>HTML</li>
-
                     </ul>
                     <ul class="ul-skills">
                         <li>CSS</li>
@@ -110,7 +104,6 @@
                         <li>C</li>
                     </ul>
                 </div>
-
             </div>
         </div>
         <div class="left">
@@ -148,7 +141,6 @@
                     </tr>
                     <tr>
                         <td>
-
                             <a href="mailto:yurk0v-vl@yandex.ru">
                                 <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
                                     <path fill="var(--gl-color)"
@@ -159,7 +151,6 @@
                     </tr>
                     <tr>
                         <td>
-
                             <a href="https://discordapp.com/users/442303510277783553/">
                                 <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
                                     <path fill="var(--gl-color)"
@@ -170,7 +161,6 @@
                     </tr>
                     <tr>
                         <td>
-
                             <a href="https://vk.com/yur_rock">
                                 <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
                                     <path fill="var(--gl-color)"
@@ -181,7 +171,6 @@
                     </tr>
                     <tr>
                         <td>
-
                             <a href="https://t.me/keinerex">
                                 <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
                                     <path fill="var(--gl-color)"
@@ -194,16 +183,12 @@
             </div>
         </div>
     </div>
-
 </div>
-
 <script>
-
     let img = document.querySelector("img")
     setInterval(() => {
         document.querySelector(".img-wrap").style.width = `${img.getBoundingClientRect().width}px`
     }, 50)
-
 
     let colors_buttons = document.querySelectorAll(".select_btn")
     for (let btn of colors_buttons) {
@@ -223,13 +208,10 @@
 
         }
     }
-    document.querySelector(".modal_okay_btn").onclick = event => {
+    document.querySelector(".modal_okay_btn").onclick = () => {
         document.documentElement.style.setProperty('--gl-color', document.querySelector(".selected-color").style.getPropertyValue("--color"));
         document.querySelector(".btn-close").click()
     }
-
 </script>
-
 </body>
-
 </html>
